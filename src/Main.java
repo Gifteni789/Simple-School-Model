@@ -11,13 +11,13 @@ public class Main {
         int num = input.nextInt();;
         while (num <= 4){
             if (num == 1){
-                addStudent(students);
+                ManageStudents.addStudent(students);
             }
             else if (num == 2){
-                removeStudent(students);
+                ManageStudents.removeStudent(students);
             }
             else if (num == 3){
-                viewStudent(students);
+                ManageStudents.viewStudent(students);
             }
             else if (num == 4){
                 System.out.println("Goodbye.");
@@ -30,26 +30,4 @@ public class Main {
             num = input.nextInt();
         }
     }
-    static String addStudent(List<String> array1){
-        Scanner input1 = new Scanner (System.in);
-        System.out.println("Enter student name: ");
-        String name = input1.nextLine();
-        array1.add(name);
-        return null;
-    }
-    static String removeStudent(List<String> array2){
-        Scanner input2 = new Scanner (System.in);
-        viewStudent(array2);
-        System.out.println("Enter student number: ");
-        int num = input2.nextInt();
-        array2.remove(num-1);
-        return null;
-    }
-    static String viewStudent(List<String> array3){
-        for (int count = 0; count < (array3).size(); count++){
-            System.out.println((count+1) + ". " + array3.get(count));
-        }
-        return null;
-    }
-
 }
